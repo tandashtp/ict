@@ -7,46 +7,27 @@
 
     <a href="mailto:feedback.imp@gmail.com">share feedback</a><br><br>
 
-    <label>school:</label> 
-    <input id="schoolInput" name="fname" type="text"><br><br>
+    <!-- The <form> tag packages all input values and sends them upon submit -->
+    <form action="mailto:feedback.imp@gmail.com" method="post" enctype="text/plain">
+        
+        <label>School:</label> 
+        <input name="School" type="text"><br><br>
 
-    <input type="checkbox" id="cricketCheckbox" name="c2" value="cricket">
-    <label for="cricketCheckbox">cricket</label><br><br>
+        <!-- If checked, this submits "Cricket_Preference=Likes cricket" -->
+        <input type="checkbox" id="cricket" name="Cricket_Preference" value="Likes cricket">
+        <label for="cricket">Cricket</label><br><br>
 
-    <label>Activity:</label>
-    <select id="activitySelect" name="activity">
-        <option value="chess">chess</option>
-        <option value="basketball">basketball</option>
-        <option value="football">football</option>
-        <option value="hockey">hockey</option>
-        <option value="cricket">cricket</option>
-    </select><br><br>
+        <label>Choose Activity:</label>
+        <select name="Likes_Activity">
+            <option value="chess">chess</option>
+            <option value="basketball">basketball</option>
+            <option value="football">football</option>
+            <option value="hockey">hockey</option>
+            <option value="cricket">cricket</option>
+        </select><br><br>
 
-    <input type="button" value="Submit" onclick="showResults()"><br><br>
-
-    <h2 id="output"></h2>
-
-    <script>
-        function showResults() {
-            // 1. Get input values
-const school = document.getElementById("schoolInput").value;
-const isCricketChecked = document.getElementById("cricketCheckbox").checked;
-const selectedActivity = document.getElementById("activitySelect").value;
-let message = "";
-if (school.trim() !== "") {
- message += "School: " + school + "<br>";
-}
-
-            if (isCricketChecked) {
-                message += "Likes cricket<br>";
-            }
-
-            message += "Likes activity: " + selectedActivity;
-
-            // 3. Display the message in the <h2> tag
-            document.getElementById("output").innerHTML = message;
-        }
-    </script>
+        <input type="submit" value="Submit">
+    </form>
 
 </body>
 </html>
