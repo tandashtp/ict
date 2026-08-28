@@ -1,33 +1,12 @@
-<!DOCTYPE html>
 <html>
-<head>
-    <title>ict</title>
-</head>
+<head></head>
+<title>ict</title>
 <body>
-
-    <a href="mailto:feedback.imp@gmail.com">share feedback</a><br><br>
-
-    <!-- The <form> tag packages all input values and sends them upon submit -->
-    <form action="mailto:feedback.imp@gmail.com" method="post" enctype="text/plain">
-        
-        <label>School:</label> 
-        <input name="School" type="text"><br><br>
-
-        <!-- If checked, this submits "Cricket_Preference=Likes cricket" -->
-        <input type="checkbox" id="cricket" name="Cricket_Preference" value="Likes cricket">
-        <label for="cricket">Cricket</label><br><br>
-
-        <label>Choose Activity:</label>
-        <select name="Likes_Activity">
-            <option value="chess">chess</option>
-            <option value="basketball">basketball</option>
-            <option value="football">football</option>
-            <option value="hockey">hockey</option>
-            <option value="cricket">cricket</option>
-        </select><br><br>
-
-        <input type="submit" value="Submit">
-    </form>
-
+<form>
+<label>School:</label>
+<input name="fname" id="school" type="text"></input><br><br>
+<input type="submit" value="submit">
+<h2>School:<output name="school display" for="school"></output>
+</form>
 </body>
 </html>
